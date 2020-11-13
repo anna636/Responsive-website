@@ -3,8 +3,10 @@ const navigation = $('.navigation');
 const openBtn = $('.hamburger');
 const closeBtn = $('.close');
 
+
+
 const navLeft = nav.position().left;
-console.log(navLeft);
+
 openBtn.on('click', () => {
   if (navLeft < 0) {
     navigation.addClass('show');
