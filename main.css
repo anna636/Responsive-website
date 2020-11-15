@@ -84,6 +84,15 @@ img{
   justify-content: space-between;
 }
 
+.fix-nav{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  z-index: 1200;
+  background-color: var (--white);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
 
 .logo{
 
@@ -297,23 +306,28 @@ img{
 
 }
 
-.special{
-  width: 150%;
+.banner img{
+ float:right;
+ bottom: 0;
+  
+}
+
+.banner img .special_01{
+  width: 85rem;
+  
 }
 
 
-
 .banner-content{
+  float: left;
  position: absolute;
  top: 50%;
  transform: translate(25%, -50%);
  color: black;
- margin-left: 20rem;
- margin-bottom: 20rem;
+ left: -4rem;
  top: 25rem;
+ z-index: 999;
 }
-
-
 
 
 .banner-content span{

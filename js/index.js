@@ -26,3 +26,6 @@ closeBtn.on('click', () => {
   }
 
 });
+
+
+const navBar = $('.navigation')
