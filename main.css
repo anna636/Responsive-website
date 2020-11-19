@@ -83,6 +83,15 @@ img{
   align-items: center;
   justify-content: space-between;
 }
+.fix-nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1200;
+  background-color: var(--white);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1)
+}
 
 .fix-nav{
   position: fixed;
@@ -90,7 +99,7 @@ img{
   left:0;
   width: 100%;
   z-index: 1200;
-  background-color: var (--white);
+  background-color: var(--white);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -367,4 +376,104 @@ margin-bottom: 1rem;
 
   background-color: transparent;
   color: black;
+}
+
+/* Glide Arrows*/
+
+.glide__arrows{
+  top: 50%;
+}
+
+.glide__arrow{
+  position: absolute;
+  top:50%;
+  background-color: grey;
+  border: 1px solid var(--black);
+  outline: none;
+  padding: 1.3rem 1.5rem;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  color: var(--white);
+ visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+
+}
+
+.glide__arrow:hover{
+  color: var(--black);
+  background-color: transparent;
+}
+
+.glide:hover .glide__arrow{
+
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.glide__arrow--left{
+  left: 5%;
+}
+
+.glide__arrow--right{
+  right: 5%;
+}
+
+@media only screen and (max-width:1300px){
+  .hero, 
+.glide__hero, 
+.banner{ 
+  height: 90vh;
+}
+
+
+.banner img{
+
+  width: 150%; 
+ bottom: 0;
+  
+}
+.banner-content{
+
+  text-align: center;
+
+  left: 28rem;
+  top: 10rem;
+
+}
+
+}
+
+@media only screen and (max-width: 815px) {
+  .banner-content {
+    width: 60%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .banner-content {
+    width: 90%;
+    top:20%;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .banner-content h1 {
+    font-size: 3rem;
+  }
+
+  .banner-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .buttons-group button {
+    padding: 1rem 2.5rem;
+    font-size: 1.5rem;
+  }
 }

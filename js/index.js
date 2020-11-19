@@ -28,4 +28,13 @@ closeBtn.on('click', () => {
 });
 
 
-const navBar = $('.navigation')
+const navHeight = $('.navigation').height();
+window.addEventListener("scroll", () => {
+  const scrollHeight = window.pageYOffset;
+  if (scrollHeight > navHeight) {
+    $('.navigation').addClass('fix-nav');
+  }
+  else {
+    $('.navigation').removeClass('fix-nav');
+  }
+})
