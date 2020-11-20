@@ -7,7 +7,7 @@ const closeBtn = $('.close');
 
 const navLeft = nav.position().left;
 
-openBtn.on('click', () => {
+openBtn.click(function () {
   if (navLeft < 0) {
     navigation.addClass('show');
     nav.addClass('show');
